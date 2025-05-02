@@ -50,14 +50,14 @@
   </section>
 
   <!-- Services Section  Chat bot-->
-  <section id="chatbot" class="content-section">
+  <section id="chatbot" class="content-section section">
   
     <!-- Row 1: Text + Image -->
     <div class="content-container">
       
       <!-- Text Section (Part 1) -->
       <div class="text-content">
-        <h2 class="section-title neon-glow">AI Chatbots for Smart Automation</h2>
+        <h2 class="section-title neon-glow">AI Chatbots</h2>
         <p class="glow-text">
           Umar AI builds intelligent, custom chatbots designed to automate customer service, sales, and operations.
           Reduce response time, engage users 24/7, and grow your business with AI-powered efficiency.
@@ -90,7 +90,7 @@
   </section>
 
   <!-- Services Section Cold Caling -->
-  <section class="content-section">
+  <section class="content-section section">
   
     <!-- Row 1: Text + Image -->
     <div class="content-container">
@@ -127,7 +127,7 @@
   </section>
   
   <!-- Services Section -->
-<section id="services" class="services">
+<section id="services" class="services section">
   <div class="cyberpunk-grid"></div>
   <div class="matrix-bg"></div>
   <h2 class="section-title neon-glow">Our Services</h2>
@@ -164,7 +164,7 @@
 
 
   <!-- Pricing Section -->
-  <section id="pricing" class="pricing">
+  <section id="pricing" class="pricing section">
     <div class="cyberpunk-grid"></div>
     <h2 class="section-title neon-glow">Pricing Plans</h2>
     <div class="pricing-grid">
@@ -225,7 +225,7 @@
   </section>
 
   <!-- About Section -->
-  <section id="about" class="about">
+  <section id="about" class="about section">
     <div class="cyberpunk-grid"></div>
     <div class="about-content">
       <h2 class="section-title neon-glow" data-text="About Us">About Us</h2>
@@ -294,7 +294,7 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="contact-section">
+  <section id="contact" class="contact-section section">
     <h2 class="section-title neon-glow">Get In Touch</h2>
     <p class="contact-subtitle">
       Have a project in mind? Let's discuss how we can help bring your ideas to life.
@@ -337,7 +337,8 @@
 
       <!-- Right Column: Contact Form -->
       <div class="contact-form">
-        <form action="mailto:ahmedkhanbeconite@gmail.com" method="GET">
+        <form action="https://formsubmit.co/ahmedkhanbeconite@gmail.com" method="POST">
+          <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
           <div class="form-group">
             <label>Name</label>
             <input type="text" name="name" required placeholder="Your Name" />
@@ -371,15 +372,16 @@
   </section>
 
   <!-- Book a Meeting Section -->
-  <section id="meeting" class="book-meeting-section">
-    <h2 class="section-title neon-glow">Book a Meeting</h2>
-    <p class="meeting-subtitle">
-      Ready to discuss your next AI project? Pick a time that works for you.
-    </p>
-    <div class="calendly-container">
-      <div class="calendly-inline-widget" data-url="https://calendly.com/ahmedkhanbeconite" style="min-width:320px;height:600px;"></div>
-    </div>
-  </section>
+<section id="meeting" class="book-meeting-section section">
+  <h2 class="section-title neon-glow">Book a Meeting</h2>
+  <p class="meeting-subtitle">
+    Ready to discuss your next AI project? Pick a time that works for you.
+  </p>
+  <div class="calendly-container">
+    <div class="calendly-inline-widget" data-url="https://calendly.com/ahmedkhanbeconite"></div>
+  </div>
+</section>
+
 
   <!-- Footer -->
   <footer class="umar-footer">
@@ -421,10 +423,14 @@
         <div class="subscribe-section">
           <h4>Subscribe</h4>
           <p>Sign up for our newsletter to get the latest updates.</p>
-          <form class="subscribe-form">
-            <input type="email" placeholder="Email Address" required />
-            <button type="submit">Subscribe</button>
-          </form>
+          
+<form class="subscribe-form" action="https://formsubmit.co/ahmedkhanbeconite@gmail.com" method="POST">
+  <input type="hidden" name="_subject" value="New Subscriber from Footer">
+  <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+  <input type="email" name="email" placeholder="Email Address" required />
+  <button type="submit">Subscribe</button>
+</form>
+
           <small>We respect your privacy. Unsubscribe at any time.</small>
         </div>
       </div>
