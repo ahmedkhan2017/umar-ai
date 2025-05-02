@@ -988,10 +988,7 @@ margin: 0 auto;
 max-width: 600px;
 width: 100%;
 box-sizing: border-box;
-height: auto;
-min-height: 600px;
 }
-
 
 .calendly-container:hover {
 transform: translateY(-10px);
@@ -1000,10 +997,9 @@ box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
 
 /* Make Calendly Widget Responsive */
 .calendly-inline-widget {
-  width: 100% !important;
-  min-width: unset !important;
-  height: 100% !important;
-  min-height: 600px;
+width: 100% !important;
+min-width: unset !important;
+height: 600px;
 }
 
 
