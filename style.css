@@ -1375,7 +1375,6 @@ color: var(--primary);
 .content-section {
   background-color: #0a0a0a;
   padding: 60px 20px;
-  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 .content-container {
@@ -1389,27 +1388,24 @@ color: var(--primary);
   border-radius: 15px;
   backdrop-filter: blur(10px);
   margin: 0 auto;
-  max-width: 1200px;
-  box-sizing: border-box;
+  max-width: 1200px; /* ✅ Increased to allow row layout */
 }
-
 .content-container:hover {
   transform: translateY(-10px);
   box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
 }
 
+
 .text-content {
   flex: 1 1 50%;
   min-width: 300px;
   max-width: 600px;
-  box-sizing: border-box;
 }
 
 .image-content {
   flex: 1 1 45%;
   min-width: 300px;
   text-align: right;
-  box-sizing: border-box;
 }
 
 .image-content img {
@@ -1439,12 +1435,19 @@ color: var(--primary);
   100% { text-shadow: -2px 0 red, 2px 0 blue; }
 }
 
-.glow-text {
-  color: #fff;
+.glow-text{
+  color: #ffff;
   line-height: 1.6;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   text-align: left;
 }
+/* Glow Text 
+.glow-text {
+  color: #fff;
+  text-shadow: 0 0 5px var(--primary), 0 0 10px var(--primary);
+  line-height: 1.6;
+  font-size: 1.2rem;
+}*/
 
 /* Section Title */
 .content-section .section-title {
@@ -1453,7 +1456,7 @@ color: var(--primary);
   z-index: 1;
   text-align: left;
   font-family: 'Orbitron', sans-serif;
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-bottom: 2rem;
 }
 
@@ -1479,44 +1482,21 @@ color: var(--primary);
   box-shadow: 0 0 15px var(--primary), 0 0 30px var(--primary);
 }
 
-/* ✅ Mobile Responsive Adjustments */
+/* Optional: Responsive Adjustments */
 @media (max-width: 768px) {
   .content-container {
     flex-direction: column;
-    align-items: center;
     text-align: center;
-    padding: 1.5rem;
   }
 
-  .text-content,
   .image-content {
-    flex: 1 1 100%;
-    min-width: 100%;
-    max-width: 100%;
     text-align: center;
   }
 
   .image-content img {
-    width: 90%;
     max-width: 100%;
-    margin: 0 auto;
-  }
-
-  .glow-text {
-    font-size: 1rem;
-    text-align: center;
-  }
-
-  .content-section .section-title {
-    font-size: 1.6rem;
-    text-align: center;
-  }
-
-  .neon-button {
-    margin: 20px auto 0;
   }
 }
-
 .content-section1 {
   background-color: #0a0a0a;
   padding: 60px 20px;
