@@ -358,8 +358,15 @@ box-sizing: border-box;
   padding-bottom: 1rem;
   padding-top: 1.5rem;
   scroll-padding: 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
+
+/* Hide scrollbar cross-browser */
+.services-scroll-wrapper::-webkit-scrollbar {
+  display: none;
+}
 .service-card {
   scroll-snap-align: start;
   flex: 0 0 250px; /* Fixed size */
@@ -406,7 +413,181 @@ box-sizing: border-box;
     flex: unset;
   }
 }
+/* why choos us */
+.why-choose {
+  padding: 3rem 1rem;
+  background: #0a0a0a;
+  position: relative;
+  overflow: hidden;
+}
 
+/* Background grid */
+.cyberpunk-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    linear-gradient(transparent 0%, rgba(255, 0, 255, 0.1) 2%, transparent 3%),
+    linear-gradient(90deg, transparent 0%, rgba(255, 0, 255, 0.1) 2%, transparent 3%);
+  background-size: 50px 50px;
+  animation: gridMove 20s linear infinite;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+@keyframes gridMove {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(50px); }
+}
+
+/* Titles */
+.section-titles {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.section-titles h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+  color: var(--primary);
+}
+
+/* Scroll arrows */
+.scroll-arrow {
+  font-size: 1.8rem;
+  background: transparent;
+  border: none;
+  color: var(--primary);
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.scroll-arrow:hover {
+  transform: scale(1.3);
+}
+
+/* Scroll row layout */
+.scroll-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+/* Cards wrapper */
+.why-scroll-wrapper {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 1rem;
+  padding: 1rem;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.why-scroll-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/* Cards */
+.choose-card {
+  scroll-snap-align: start;
+  flex: 0 0 85%;
+  max-width: 85%;
+  background: #101010;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(255, 0, 255, 0.1);
+  border: 1px solid #222;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 220px;
+}
+
+.choose-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.3);
+}
+
+/* Icon styling */
+.card-icon {
+  font-size: 2.2rem;
+  color: var(--primary);
+  margin-bottom: 0.8rem;
+}
+
+/* Card text */
+.choose-card h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--light);
+}
+
+.choose-card p {
+  font-size: 0.85rem;
+  color: var(--light);
+  line-height: 1.4;
+}
+
+/* CTA Button */
+.why-cta {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.glitch-button {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Orbitron", sans-serif;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.glitch-button:hover {
+  background-color: var(--primary);
+  color: #000;
+  box-shadow: 0 0 12px var(--primary);
+}
+
+/* Tablet and desktop: show more cards */
+@media (min-width: 768px) {
+  .choose-card {
+    flex: 0 0 45%;
+    max-width: 45%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .choose-card {
+    flex: 0 0 30%;
+    max-width: 30%;
+  }
+
+  .section-titles h2 {
+    font-size: 2.5rem;
+  }
+
+  .choose-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .choose-card p {
+    font-size: 1rem;
+  }
+}
 
 /* Pricing Section */
 .pricing {
@@ -1000,13 +1181,13 @@ box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
 .calendly-inline-widget {
 width: 100% !important;
 min-width: unset !important;
-height: 350px;
+height: 600px;
 }
 
 
 
 /* Footer Styles */
-.umar-footer {
+.fluentmind-footer {
 background-color: #0d0d0d;
 color: #ccc;
 font-family: 'Orbitron', sans-serif;
@@ -1115,7 +1296,7 @@ transition: background 0.3s ease;
 
 .subscribe-section button:hover {
 transform: scale(1.05);
-box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
+box-shadow: 0 0 20px var(--primary);
 }
 
 .subscribe-section small {
